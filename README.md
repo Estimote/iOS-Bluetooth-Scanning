@@ -1,2 +1,3 @@
-# iOS-Scanners
-Framework for scanning Bluetooth packets.
+# iOS-Bluetooth-Scanning
+
+Library for scanning Bluetooth packets broadcasted by Estimote devices.
