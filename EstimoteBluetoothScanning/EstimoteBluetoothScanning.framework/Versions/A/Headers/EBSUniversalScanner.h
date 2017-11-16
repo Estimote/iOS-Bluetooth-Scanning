@@ -12,7 +12,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "EBSScanInfo.h"
-#import "EBSScanRestarter.h"
 
 
 /**
@@ -42,6 +41,8 @@ typedef NS_ENUM(NSInteger, EBSUniversalScannerError)
 #define EBSUniversalScannerRestartIntervalRestartNever INFINITY
 
 @class EBSUniversalScanner;
+@class EBSScanRestarter;
+
 /**
  Defines the methods to receive info about scanned Estimote devices.
  */
