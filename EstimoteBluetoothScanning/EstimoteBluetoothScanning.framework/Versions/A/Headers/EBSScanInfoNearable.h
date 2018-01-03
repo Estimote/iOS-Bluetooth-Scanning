@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger , EBSScanInfoNearableMotionState)
     EBSScanInfoNearableMotionStateMoving
 };
 
+// TODO: rename to EBS!
 typedef NS_ENUM(NSInteger , EBSScanInfoNearableAdvertisingChannel)
 {
     ECOScanInfoAdvertisingNearableChannelUnknown = 0,
