@@ -26,8 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The possible errors returned during scanning Estimote Devices.
  */
-typedef NS_ENUM(NSInteger, EBSUniversalScannerError)
-{
+typedef NS_ENUM(NSInteger, EBSUniversalScannerError) {
     /** The platform does not support Bluetooth low energy. */
     EBSUniversalScannerErrorBluetoothNotSupported,
 
