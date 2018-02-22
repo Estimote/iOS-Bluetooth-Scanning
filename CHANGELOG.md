@@ -6,6 +6,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [0.2.0] - 2018-02-22
+
+### Added
+
+- Added inits for `EBSScanInfoLocationConnectivity`, `EBSScanInfoEstimoteTelemetryA`, `EBSScanInfoEstimoteTelemetryB`.
+
+### Changed
+
+- Renamed `advertisementData` to `serviceData` in `EBSScanInfoEstimoteEncrypted`.
+- Updated `EBSScanInfoFrameType` enum's cases to fit Estimote packet names.
+
+### Fixed
+
+- Fixed warning on `EBSUniversalScanner`'s `state` property by using a custom enum instead of deprecated `CBCentralManagerState`.
+
+
 ## [0.1.1] - 2018-02-07
 
 ### Added
