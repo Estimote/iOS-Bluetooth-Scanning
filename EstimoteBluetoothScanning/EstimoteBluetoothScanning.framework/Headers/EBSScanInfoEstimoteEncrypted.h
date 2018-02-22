@@ -17,9 +17,9 @@
 @interface EBSScanInfoEstimoteEncrypted : EBSScanInfo
 
 /**
- Service data sent in the packet.
+ Advertisement data sent in the packet.
  */
-@property (nonatomic, strong, readonly) NSData *serviceData;
+@property (nonatomic, strong, readonly) NSData *advertisementData;
 
 /**
  Designated initializer.
@@ -27,12 +27,12 @@
  @param peripheralIdentifier Identifier of the discovered peripheral that this scan info represents.
  @param rssi Packet rssi.
  @param scanDate Date at which the scan info was parsed.
- @param serviceData Service data broadcasted in packet.
+ @param advertisementData Service data broadcasted in packet.
  */
 - (instancetype)initWithPeripheralIdentifier:(NSUUID *)peripheralIdentifier
                                         rssi:(NSNumber *)rssi
                                     scanDate:(NSDate *)scanDate
-                                 serviceData:(NSData *)serviceData;
+                           advertisementData:(NSData *)advertisementData;
 
 // Override
 + (EBSScanInfo *)parseScanInfoWithCbPeripheral:(CBPeripheral *)cbPeripheral
