@@ -14,21 +14,29 @@
 #define EBSScanInfoEstimoteUtilitiesErrorDomain @"EBSScanInfoEstimoteUtilitiesErrorDomain"
 
 /**
- *  ENUM describing bluetooth packet frame type.
+ *  Estimote packet type. Note that the values under the enum aren't equal to values broadcast in the packets.
  */
 typedef NS_ENUM(NSInteger, EBSScanInfoFrameType) {
     /**
      *  Unknown frame type, parsing error.
      */
-    EBSScanInfoFrameTypeUnknown,
+    EBSScanInfoFrameTypeUnknown = 0,
     /**
-     *  Service Data frame type.
+     *  Estimote Connectivity frame type.
      */
-    EBSScanInfoFrameTypeServiceDevice,
+    EBSScanInfoFrameTypeEstimoteConnectivity,
+    /**
+     *  Estimote Location frame type.
+     */
+    EBSScanInfoFrameTypeEstimoteLocation,
     /**
      *  Estimote Telemetry frame type.
      */
     EBSScanInfoFrameTypeEstimoteTelemetry,
+    /**
+     *  Estimote UWB frame type.
+     */
+    EBSScanInfoFrameTypeUWB,
     /**
      *  Estimote Mirror frame type.
      */
@@ -40,7 +48,7 @@ typedef NS_ENUM(NSInteger, EBSScanInfoFrameType) {
 };
 
 /**
- *  ENUM describing bluetooth packet subframe type.
+ *  Estimote packet's subframe type
  */
 typedef NS_ENUM(NSInteger, EBSScanInfoSubframeType) {
     /**
