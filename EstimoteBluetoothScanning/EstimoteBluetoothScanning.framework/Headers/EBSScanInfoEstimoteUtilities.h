@@ -99,8 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface EBSScanInfoEstimoteUtilities : NSObject
 
 /**
- *  Method is parsing long version (16 bytes) of device identifier
- *  used for decoding bluetooth scan response of Next-Gen beacons.
+ *  Method is parsing long version (16 bytes) of device identifier used for decoding Bluetooth scan response of Next-Gen beacons.
  *
  *  @param data advertisementData to parse
  *
@@ -109,8 +108,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString * _Nullable)parse16ByteIdentifier:(NSData *)data;
 
 /**
- *  Method is parsing short version (8 bytes) of device identifier
- *  used for decoding bluetooth scan response of Next-Gen beacons.
+ *  Method is parsing short version (8 bytes) of device identifier used for decoding Bluetooth scan response of Next-Gen beacons.
  *
  *  @param data advertisementData to parse
  *
@@ -119,8 +117,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString * _Nullable)parse8ByteIdentifier:(NSData *)data;
 
 /**
- *  Method is parsing super short version (4 bytes) of device identifier
- *  used for decoding bluetooth scan response of Next-Gen beacons.
+ *  Method is parsing super short version (4 bytes) of device identifier used for decoding Bluetooth scan response of Next-Gen beacons.
  *
  *  @param data advertisementData to parse
  *
@@ -129,8 +126,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString * _Nullable)parse4ByteIdentifier:(NSData *)data;
 
 /**
- *  Method is parsing frame type of Next-Gen
- *  beacons from bluetooth scan response.
+ *  Method is parsing frame type of Next-Gen beacons from Bluetooth scan response.
  *
  *  @param data advertisementData to parse
  *
@@ -139,8 +135,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (EBSScanInfoFrameType)parseFrameType:(NSData *)data;
 
 /**
- *  Method is parsing subframe type of Next-Gen
- *  beacons from bluetooth scan response.
+ *  Method is parsing subframe type of Next-Gen beacons from Bluetooth scan response.
  *
  *  @param data advertisementData to parse
  *
@@ -149,8 +144,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (EBSScanInfoSubframeType)parseSubframeType:(NSData *)data;
 
 /**
- *  Method is parsing protocol version of Next-Gen
- *  beacons from bluetooth scan response.
+ *  Method is parsing protocol version of Next-Gen beacons from Bluetooth scan response.
  *
  *  @param data advertisementData to parse
  *
@@ -160,7 +154,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  Method is parsing timer return from the Next-Gen
- *  beacons  from bluetooth scan response.
+ *  beacons  from Bluetooth scan response.
  *
  *  @param counter counter value (number of units)
  *  @param unit    time unit

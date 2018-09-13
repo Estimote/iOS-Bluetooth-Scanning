@@ -19,7 +19,7 @@
 /**
  Service data sent in the packet.
  */
-@property (nonatomic, strong, readonly) NSData *serviceData;
+@property(nonatomic, strong, readonly) NSData *serviceData;
 
 /**
  Designated initializer.
@@ -41,6 +41,5 @@
 
 // Override
 + (NSArray *)broadcastedServices;
-
 
 @end

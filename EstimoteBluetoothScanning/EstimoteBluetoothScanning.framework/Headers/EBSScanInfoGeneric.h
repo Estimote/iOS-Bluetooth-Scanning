@@ -17,18 +17,14 @@
  * Use this class to scan for any packet with Estimote Service UUID that wasn't deserialized by other ScanInfo classes.
  */
 
-
 @interface EBSScanInfoGeneric : EBSScanInfo
 
 #pragma mark Properties
-///-----------------------------------------
-/// @name Properties
-///-----------------------------------------
 
 /**
  * Packet's advertisement data dictionary.
  */
-@property (nonatomic, strong, readonly) NSDictionary<NSString*, id> *advertisementDataDictionary;
+@property(nonatomic, strong, readonly) NSDictionary<NSString *, id> *advertisementDataDictionary;
 
 /**
  * Designated initalizer
@@ -49,4 +45,3 @@
 - (void)encodeWithCoder:(NSCoder *)coder;
 
 @end
-

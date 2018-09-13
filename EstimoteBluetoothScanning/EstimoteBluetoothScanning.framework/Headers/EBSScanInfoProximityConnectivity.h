@@ -19,7 +19,6 @@ typedef NS_ENUM(NSInteger , EBSScanInfoProximityFirmwareState) {
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  *  ECOScanInfoProximityConnectivity is a class dedicated to Connectivity packet for Proximity Beacons.
  */

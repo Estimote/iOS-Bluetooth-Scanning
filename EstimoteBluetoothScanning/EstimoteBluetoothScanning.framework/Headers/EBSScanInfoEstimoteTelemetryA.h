@@ -21,66 +21,66 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Accelerometer data related to X axis
  */
-@property (nonatomic, strong, readonly) NSNumber *accelerationX;
+@property(nonatomic, strong, readonly) NSNumber *accelerationX;
 
 /**
  *  Accelerometer data related to Y axis
  */
-@property (nonatomic, strong, readonly) NSNumber *accelerationY;
+@property(nonatomic, strong, readonly) NSNumber *accelerationY;
 
 /**
  *  Accelerometer data related to Z axis
  */
-@property (nonatomic, strong, readonly) NSNumber *accelerationZ;
+@property(nonatomic, strong, readonly) NSNumber *accelerationZ;
 
 /**
  *  Duration of previous motion state in seconds.
  */
-@property (nonatomic, strong, readonly) NSNumber *previousMotionStateDurationInSeconds;
+@property(nonatomic, strong, readonly) NSNumber *previousMotionStateDurationInSeconds;
 
 /**
  *  Duration of current motion state in seconds.
  */
-@property (nonatomic, strong, readonly) NSNumber *currentMotionStateDurationInSeconds;
+@property(nonatomic, strong, readonly) NSNumber *currentMotionStateDurationInSeconds;
 
 /**
  *  Motion state of the device. It can be moving (bool value YES) or not moving (bool value NO).
  */
-@property (nonatomic, strong, readonly) NSNumber *motionState;
+@property(nonatomic, strong, readonly) NSNumber *motionState;
 
 /**
  *  Value of GPIO port 0. Possible values are 0 (LOW) and 1 (HIGH).
  */
-@property (nonatomic, strong, readonly) NSNumber *gpioPort0Value;
+@property(nonatomic, strong, readonly) NSNumber *gpioPort0Value;
 
 /**
  *  Value of GPIO port 1. Possible values are 0 (LOW) and 1 (HIGH).
  */
-@property (nonatomic, strong, readonly) NSNumber *gpioPort1Value;
+@property(nonatomic, strong, readonly) NSNumber *gpioPort1Value;
 
 /**
  *  Value of GPIO port 2. Possible values are 0 (LOW) and 1 (HIGH).
  */
-@property (nonatomic, strong, readonly) NSNumber *gpioPort2Value;
+@property(nonatomic, strong, readonly) NSNumber *gpioPort2Value;
 
 /**
  *  Value of GPIO port 3. Possible values are 0 (LOW) and 1 (HIGH).
  */
-@property (nonatomic, strong, readonly) NSNumber *gpioPort3Value;
+@property(nonatomic, strong, readonly) NSNumber *gpioPort3Value;
 
 /**
  *  FIRMWARE Flag indicating application error. Bool value NO - no error, YES at least one error occurred.
  *
  *  Available since protocol version 1. In protocol version 0, it's in the type B Telemetry packet.
  */
-@property (nonatomic, strong, readonly, nullable) NSNumber *applicationError;
+@property(nonatomic, strong, readonly, nullable) NSNumber *applicationError;
 
 /**
  *  FIRMWARE Flag indicating Real Time Clock is not properly configured. Bool value NO - configured, YES - not configured.
  *
  *  Available since protocol version 1. In protocol version 0, it's in the type B Telemetry packet.
  */
-@property (nonatomic, strong, readonly, nullable) NSNumber *realTimeClockError;
+@property(nonatomic, strong, readonly, nullable) NSNumber *realTimeClockError;
 
 /**
  *  Atmospheric pressure in pascals (Pa).
@@ -89,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  Available since protocol version 2.
  */
-@property (nonatomic, strong, readonly, nullable) NSNumber *pressureInPascals;
+@property(nonatomic, strong, readonly, nullable) NSNumber *pressureInPascals;
 
 /**
  * Init.

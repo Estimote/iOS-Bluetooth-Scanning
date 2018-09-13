@@ -12,7 +12,6 @@
 #import <Foundation/Foundation.h>
 #import "EBSScanInfo.h"
 
-
 typedef NS_ENUM(NSInteger, EBSScanInfoRangingInProgressFlag) {
     /* Broadcasting only */
     EBSScanInfoRangingNotInProgress = 0,
@@ -20,39 +19,34 @@ typedef NS_ENUM(NSInteger, EBSScanInfoRangingInProgressFlag) {
     EBSScanInfoRangingInProgress = 1,
 };
 
-
 @interface EBSScanInfoUWB : EBSScanInfo
 
 #pragma mark Properties
-///-----------------------------------------
-/// @name Properties
-///-----------------------------------------
 
 /**
  * Type of Estimote Broadcasting Scheme frame.
  */
-@property (nonatomic, assign, readonly) NSInteger frameType;
+@property(nonatomic, assign, readonly) NSInteger frameType;
 
 /**
  * Version of Estimote Broadcasting Scheme protocol.
  */
-@property (nonatomic, assign, readonly) NSInteger protocolVersion;
+@property(nonatomic, assign, readonly) NSInteger protocolVersion;
 
 /**
  * Public identifier of the Estimote UWB Device.
  */
-@property (nonatomic, strong, readonly) NSString *publicId;
+@property(nonatomic, strong, readonly) NSString *publicId;
 
 /**
  * Pairs of mac-distance estimates.
  */
-@property (nonatomic, strong, readonly) NSDictionary<NSString*, NSNumber*> *distanceEstimates;
+@property(nonatomic, strong, readonly) NSDictionary<NSString *, NSNumber *> *distanceEstimates;
 
 /**
  * Ranging in progress flag.
  */
-@property (nonatomic, assign, readonly) EBSScanInfoRangingInProgressFlag rip;
-
+@property(nonatomic, assign, readonly) EBSScanInfoRangingInProgressFlag rip;
 
 #pragma mark - Overrides
 

@@ -13,7 +13,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-
 @class EBSUniversalScanner;
 @class EBSScanRestarter;
 @class EBSTimerFactory;
@@ -21,7 +20,6 @@
 @protocol EBSUniversalScannerProtocol;
 
 NS_ASSUME_NONNULL_BEGIN
-
 
 /**
  The possible errors returned during scanning Estimote Devices.
@@ -75,7 +73,7 @@ typedef NS_ENUM(NSUInteger, EBSCentralManagerState) {
 
 /**
  Invoked when a new scan info is available.
- 
+
  @param universalScanner The scanner object that generated the event.
  @param scanInfo The info about scanned device.
  */
@@ -83,7 +81,7 @@ typedef NS_ENUM(NSUInteger, EBSCentralManagerState) {
 
 /**
  Invoked when an error occurred while scanning.
- 
+
  @param universalScanner The scanner object that generated the event.
  @param error The error object containing information why scanning failed.
  */
@@ -95,7 +93,7 @@ typedef NS_ENUM(NSUInteger, EBSCentralManagerState) {
  Objects conforming to`EBSUniversalScannerProtocol` are used to scan for Estimote logical devices.
  In order to scan for a specific logical device or a set of such, there should
  exist for each a subclass of `ECOScanInfo` implementing parsing logic.
- 
+
  To start scan simply implement EBSUniversalScannerDelegate and invoke:
  NSArray *devicesToScan = @[ [`EBSScanInfoLogicalDevice1` class],
  [`EBSScanInfoLogicalDevice2` class],
@@ -103,7 +101,7 @@ typedef NS_ENUM(NSUInteger, EBSCentralManagerState) {
  EBSUniversalScanner *universalScanner = [EBSUniversalScanner new];
  universalScanner.delegate = myEBSUniversalScannerDelegate;
  [universalScanner startScanForDevicesRepresentedByClasses:devicesToScan];
- 
+
  @see EBSUniversalScanner.
  */
 @protocol EBSUniversalScannerProtocol <NSObject>
@@ -111,29 +109,29 @@ typedef NS_ENUM(NSUInteger, EBSCentralManagerState) {
 /**
  The delegate object to receive scan info events.
  */
-@property (nonatomic, weak, readwrite, nullable) id<EBSUniversalScannerDelegate> delegate;
+@property(nonatomic, weak, readwrite, nullable) id<EBSUniversalScannerDelegate> delegate;
 
 /**
  Informs if scan is in progress.
  */
-@property (nonatomic, assign, readonly) BOOL isScanning;
+@property(nonatomic, assign, readonly) BOOL isScanning;
 
 /**
  An array of `ECOScanInfo` subclasses representing device types
  for which `EBSUniversalScanner` is scanning.
  */
-@property (nonatomic, strong, readonly, nullable) NSArray<Class> *deviceTypesToScan;
+@property(nonatomic, strong, readonly, nullable) NSArray<Class> *deviceTypesToScan;
 
 /**
  Core Bluetooth Central Manager state.
  */
-@property (nonatomic, assign, readonly) EBSCentralManagerState state;
+@property(nonatomic, assign, readonly) EBSCentralManagerState state;
 
 /**
  Start a scan for Estimote devices of specified types.
  Will override previous scan settings if scanner is scanning when the method is called.
  If at least one device type has no service defined `EBSUniversalScanner` won't scan in background.
- 
+
  @param classesRepresentingDevices An array of `EBSScanInfo` subclasses representing device types to scan.
  */
 - (void)startScanForDevicesRepresentedByClasses:(NSArray<Class> *)classesRepresentingDevices;
@@ -145,20 +143,18 @@ typedef NS_ENUM(NSUInteger, EBSCentralManagerState) {
 
 @end
 
-
 /**
  Implementation of EBSUniversalScannerProtocol, uses Core Bluetooth manager under the hood
  to scan & deserialize Bluetooth packets broadcast by Estimote devices.
  */
 @interface EBSUniversalScanner : NSObject <EBSUniversalScannerProtocol>
 
-
-@property (nonatomic, weak, readwrite, nullable) id<EBSUniversalScannerDelegate> delegate;
+@property(nonatomic, weak, readwrite, nullable) id<EBSUniversalScannerDelegate> delegate;
 
 /**
  Shared dispatch queue passed to CBCentralManagers upon creation.
  */
-@property (nonatomic, strong, readonly, class) dispatch_queue_t defaultCBCentralManagerQueue;
+@property(nonatomic, strong, readonly, class) dispatch_queue_t defaultCBCentralManagerQueue;
 
 /**
  Designated initializer.
@@ -181,14 +177,14 @@ typedef NS_ENUM(NSUInteger, EBSCentralManagerState) {
                         EBSUniversalScannerRestartIntervalRestartNever to disable automatic restarting at all.
  */
 - (instancetype)initWithMinRestartInterval:(NSTimeInterval)restartInterval
-__deprecated_msg("Use -initWithScanRestartTimerTimeInterval: instead");
+    __deprecated_msg("Use -initWithScanRestartTimerTimeInterval: instead");
 
 /**
  Convenience initializer.
  Creates a CBCentralManager object operating at +defaultCBCentralManagerQueue queue, a new EBSScanRestarter object
  with provided restartInterval and timer-based restart mode and calls designated initializer.
  Note: This will initialize UniversalScanner enabling performing new way of scanning restarts based on timer.
- 
+
  @param restartTimerTimeInterval The time interval for scanning restarts run on a timer.
  */
 - (instancetype)initWithScanRestartTimerTimeInterval:(NSTimeInterval)restartTimerTimeInterval;

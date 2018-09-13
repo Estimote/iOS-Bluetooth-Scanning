@@ -16,7 +16,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  *  Represents scan information for mesh packet broadcasted by beacons in a mesh.
  */
@@ -25,53 +24,53 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Type of Estimote Broadcasting Scheme frame.
  */
-@property (nonatomic, readonly) NSInteger frameType;
+@property(nonatomic, readonly) NSInteger frameType;
 
 /**
  * Version of Estimote Broadcasting Scheme protocol.
  */
-@property (nonatomic, readonly) NSInteger protocolVersion;
+@property(nonatomic, readonly) NSInteger protocolVersion;
 
 /**
  *  Half (8 bytes) of the full device identifier (16 bytes)
  *  represented as a hex string for version 1.0 and 1.1 mesh packet.
  *  Version 1.2 introduce super short version of identifier - 4 bytes only.
  */
-@property (nonatomic, strong, readonly) NSString *shortIdentifier;
+@property(nonatomic, strong, readonly) NSString *shortIdentifier;
 
 /**
  *  Identifier of a mesh network.
  */
-@property (nonatomic, strong, readonly) NSNumber *meshNetworkIdentifier;
+@property(nonatomic, strong, readonly) NSNumber *meshNetworkIdentifier;
 
 /**
  *  Version of current mesh settings.
  */
-@property (nonatomic, strong, readonly) NSNumber *meshSettingsIdentifier;
+@property(nonatomic, strong, readonly) NSNumber *meshSettingsIdentifier;
 
 /**
  *  Version of current mesh report.
  *  @note Supported by v1.2 mesh frames only, otherwise nil.
  */
-@property (nonatomic, strong, readonly) NSNumber *meshReportIdentifier;
+@property(nonatomic, strong, readonly) NSNumber *meshReportIdentifier;
 
 /**
  *  Counter for number of intermediate devices through which data had to pass to reach its destination.
  *  @note Supported by v1.0 mesh frames only, otherwise nil.
  */
-@property (nonatomic, strong, readonly, nullable) NSNumber *hopCounter;
+@property(nonatomic, strong, readonly, nullable) NSNumber *hopCounter;
 
 /**
  *  Version of an application running on a device.
  *  @note Supported by v1.1 and v1.2 mesh frames only, otherwise nil.
  */
-@property (nonatomic, strong, readonly, nullable) NSString *appVersion;
+@property(nonatomic, strong, readonly, nullable) NSString *appVersion;
 
 /**
  *  Version of a bootloader running on a device.
  *  @note Supported by v1.1 and v1.2 mesh frames only, otherwise nil.
  */
-@property (nonatomic, strong, readonly, nullable) NSString *bootloaderVersion;
+@property(nonatomic, strong, readonly, nullable) NSString *bootloaderVersion;
 
 /**
  *  Initializes an object with scan information.
@@ -99,9 +98,9 @@ NS_ASSUME_NONNULL_BEGIN
                        meshNetworkIdentifier:(NSNumber *)meshNetworkIdentifier
                       meshSettingsIdentifier:(NSNumber *)meshSettingsIdentifier
                         meshReportIdentifier:(NSNumber *)meshReportIdentifier
-                                  hopCounter:(NSNumber * _Nullable)hopCounter
-                                  appVersion:(NSString * _Nullable)appVersion
-                           bootloaderVersion:(NSString * _Nullable)bootloaderVersion;
+                                  hopCounter:(NSNumber *_Nullable)hopCounter
+                                  appVersion:(NSString *_Nullable)appVersion
+                           bootloaderVersion:(NSString *_Nullable)bootloaderVersion;
 
 @end
 
