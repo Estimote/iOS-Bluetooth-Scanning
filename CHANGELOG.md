@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+## [1.0.1] - 2019-04-16
+### Fixed
+
+- Parsing different LTE beacon's firmware versions, so beacons with firmware 0.0.9 - 0.0.13 would be detectable.
+
 ## [1.0.0] - 2019-02-01
 ### Added
 - LTE Connectivity packet has a new flag indicating if LTE beacon's button was pressed. This flag should be toggled for a limited time (most likely 10 seconds).
