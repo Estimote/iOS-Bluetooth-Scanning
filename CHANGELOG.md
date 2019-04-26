@@ -6,21 +6,31 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.0.2] - 2019-04-26
+
+### Fixed
+
+- Corrected validation of the LTE beacon packet's app and boo version to support firmwares 0.0.12+
+
 ## [1.0.1] - 2019-04-16
+
 ### Fixed
 
 - Parsing different LTE beacon's firmware versions, so beacons with firmware 0.0.9 - 0.0.13 would be detectable.
 
 ## [1.0.0] - 2019-02-01
+
 ### Added
+
 - LTE Connectivity packet has a new flag indicating if LTE beacon's button was pressed. This flag should be toggled for a limited time (most likely 10 seconds).
 - Support for iOS 10.0
 
-## [0.3.0] - 2018-09-13
+## [0.3.0-lte] - 2018-08-27
 
 ### Added
 
-- Added support for LTE Connectivity packet — `EBSScanInfoLTEConnectivity`.
+- Support for LTE Connectivity packet.
+- Sample apps for ease of developement.
 
 ## [0.2.0] - 2018-02-22
 
