@@ -89,6 +89,20 @@ typedef NS_ENUM(NSInteger, EBSScanInfoProtocolVersion) {
     EBSScanInfoProtocolVersion_v12
 };
 
+/**
+ Enum with available devices families. Introduced for Connectivity frame in 1.2 version.
+ */
+typedef NS_ENUM(NSUInteger, EBSScanInfoDeviceFamily) {
+    EBSScanInfoDeviceFamilyUnknown,
+    EBSScanInfoDeviceFamilyProximityTag,
+    EBSScanInfoDeviceFamilyProximityBeacon,
+    EBSScanInfoDeviceFamilyLocationBeacon,
+    EBSScanInfoDeviceFamilyUWBBeacon,
+    EBSScanInfoDeviceFamilyMirror,
+    EBSScanInfoDeviceFamilyLTEBeacon,
+    EBSScanInfoDeviceFamilySticker
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -151,6 +165,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return parsed subframe type as NSInteger. Value EBSScanInfoProtocolVersionUnsupported (-1) means error in parsing.
  */
 + (EBSScanInfoProtocolVersion)parseProtocolVersion:(NSData *)data;
+
+/**
+ Parses device's family.
+
+ @param data Advertisement data to parse.
+ @return Device's family.
+ */
++ (EBSScanInfoDeviceFamily)parseDeviceFamily:(NSData *)data;
 
 /**
  *  Method is parsing timer return from the Next-Gen
