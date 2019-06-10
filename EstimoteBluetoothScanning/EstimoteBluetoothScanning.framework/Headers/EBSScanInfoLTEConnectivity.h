@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Flag indicating if beacon's button was pressed.
  */
-@property(nonatomic, strong, readonly, nullable) NSNumber *isPressed;
+@property(nonatomic, strong, readonly) NSNumber *isPressed;
 
 /**
  Initializer.
@@ -54,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
                                     publicID:(NSString *)publicID
                                   appVersion:(nullable NSString *)appVersion
                            bootloaderVersion:(nullable NSString *)bootloaderVersion
-                                   isPressed:(nullable NSNumber *)isPressed;
+                                   isPressed:(NSNumber *)isPressed;
 
 @end
 
