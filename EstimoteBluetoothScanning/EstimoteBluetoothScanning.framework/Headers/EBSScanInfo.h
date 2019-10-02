@@ -28,13 +28,13 @@
 + (NSArray *)broadcastedServices;
 
 /** Identifier of scanned peripheral. */
-@property(nonatomic, strong, readonly) NSUUID *peripheralIdentifier;
+@property (nonatomic, strong, readonly) NSUUID *peripheralIdentifier;
 
 /** RSSI value measured during the scan. */
-@property(nonatomic, strong, readonly) NSNumber *rssi;
+@property (nonatomic, strong, readonly) NSNumber *rssi;
 
 /** Time when the device was scanned. */
-@property(nonatomic, strong, readonly) NSDate *scanDate;
+@property (nonatomic, strong, readonly) NSDate *scanDate;
 
 /**
  * Attempts to parse provided info into a new ECOScanInfo object.
@@ -62,7 +62,7 @@
  */
 - (instancetype)initWithPeripheralIdentifier:(NSUUID *)peripheralIdentifier rssi:(NSNumber *)rssi scanDate:(NSDate *)scanDate;
 
-#pragma - Overrides
+#pragma- Overrides
 
 - (id)initWithCoder:(NSCoder *)coder;
 - (void)encodeWithCoder:(NSCoder *)coder;

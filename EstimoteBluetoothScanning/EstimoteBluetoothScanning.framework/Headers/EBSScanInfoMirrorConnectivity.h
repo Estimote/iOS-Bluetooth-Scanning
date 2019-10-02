@@ -24,17 +24,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Cloud identifier of discovered device.
  */
-@property(nonatomic, strong, readonly) NSString *publicID;
+@property (nonatomic, strong, readonly) NSString *publicID;
 
 /**
  *  Flag indicating if Display Access Control is enabled for this device.
  */
-@property(nonatomic, assign, readonly) BOOL displayAccessControlEnabled;
+@property (nonatomic, assign, readonly) BOOL displayAccessControlEnabled;
 
 /**
  *  Measured power of discovered device.
  */
-@property(nonatomic, assign, readonly) NSInteger measuredPower;
+@property (nonatomic, assign, readonly) NSInteger measuredPower;
 
 /**
  *  Initializes an object with scan information.

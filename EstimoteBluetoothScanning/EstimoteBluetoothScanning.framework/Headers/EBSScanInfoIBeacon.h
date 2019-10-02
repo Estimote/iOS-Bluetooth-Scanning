@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 #import "EBSScanInfo.h"
 
-typedef NS_ENUM(NSInteger, EBSScanInfoIBeaconFirmwareState) { EBSScanInfoIBeaconFirmwareStateBoot = 0, EBSScanInfoIBeaconFirmwareStateApp };
+typedef NS_ENUM (NSInteger, EBSScanInfoIBeaconFirmwareState) { EBSScanInfoIBeaconFirmwareStateBoot = 0, EBSScanInfoIBeaconFirmwareStateApp };
 
 /**
  * An object holding information about an Estimote device acting as an iBeacon.
@@ -25,32 +25,32 @@ typedef NS_ENUM(NSInteger, EBSScanInfoIBeaconFirmwareState) { EBSScanInfoIBeacon
 /**
  *  MAC address of the device
 */
-@property(nonatomic, strong, readonly) NSString *macAddress;
+@property (nonatomic, strong, readonly) NSString *macAddress;
 
 /**
  * Major value of the beacon.
  *
  * In case of devices running very old firmware or in boot state the value is nil.
  */
-@property(nonatomic, strong, readonly) NSNumber *major;
+@property (nonatomic, strong, readonly) NSNumber *major;
 
 /**
  * Minor value of the beacon.
  *
  * In case of devices running very old firmware or in boot state the value is nil.
  */
-@property(nonatomic, strong, readonly) NSNumber *minor;
+@property (nonatomic, strong, readonly) NSNumber *minor;
 
 /**
  * Measured power of the beacon (with what RSSI [dBm] device can be heard at exactly 1 m).
  *
  * In case of devices running very old firmware or in boot state the value is nil.
  */
-@property(nonatomic, strong, readonly) NSNumber *measuredPower;
+@property (nonatomic, strong, readonly) NSNumber *measuredPower;
 
 /**
  * State of the firmware on the device.
  */
-@property(nonatomic, assign, readonly) EBSScanInfoIBeaconFirmwareState firmwareState;
+@property (nonatomic, assign, readonly) EBSScanInfoIBeaconFirmwareState firmwareState;
 
 @end

@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 #import "EBSScanInfo.h"
 
-typedef NS_ENUM(NSInteger , EBSScanInfoProximityFirmwareState) {
+typedef NS_ENUM (NSInteger, EBSScanInfoProximityFirmwareState) {
     EBSScanInfoProximityFirmwareStateBoot = 0,
     EBSScanInfoProximityFirmwareStateApp
 };
@@ -41,7 +41,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, assign, readonly) EBSScanInfoProximityFirmwareState firmwareState;
 
-
 /**
  * Initializer.
  *
@@ -59,7 +58,6 @@ NS_ASSUME_NONNULL_BEGIN
                                   macAddress:(NSString *)macAddress
                                firmwareState:(EBSScanInfoProximityFirmwareState)firmwareState
                                measuredPower:(NSNumber *)measuredPower;
-
 
 @end
 

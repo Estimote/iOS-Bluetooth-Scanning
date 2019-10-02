@@ -22,27 +22,27 @@
 /**
  *  Cloud identifier of discovered device.
  */
-@property(nonatomic, strong, readonly) NSString *publicID;
+@property (nonatomic, strong, readonly) NSString *publicID;
 
 /**
  *  Version of application running on the device.
  */
-@property(nonatomic, strong, readonly) NSString *appVersion;
+@property (nonatomic, strong, readonly) NSString *appVersion;
 
 /**
  *  Version of bootloader running on the device.
  */
-@property(nonatomic, strong, readonly) NSString *bootloaderVersion;
+@property (nonatomic, strong, readonly) NSString *bootloaderVersion;
 
 /**
  *  Flag indicating if device was shaken.
  */
-@property(nonatomic, strong, readonly) NSNumber *isShaken;
+@property (nonatomic, strong, readonly) NSNumber *isShaken;
 
 /**
  *  Flag indicating if device was scanned from very short distance.
  */
-@property(nonatomic, strong, readonly) NSNumber *isNear;
+@property (nonatomic, strong, readonly) NSNumber *isNear;
 
 /**
  Init.

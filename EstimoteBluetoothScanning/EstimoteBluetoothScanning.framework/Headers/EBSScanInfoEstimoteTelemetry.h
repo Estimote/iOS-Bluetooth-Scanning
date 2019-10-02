@@ -23,13 +23,13 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Version of scan info Protocol.
  */
-@property(nonatomic, assign, readonly) EBSScanInfoProtocolVersion protocolVersion;
+@property (nonatomic, assign, readonly) EBSScanInfoProtocolVersion protocolVersion;
 
 /**
  *  Half (8 bytes) of the full device identifier (16 bytes)
  *  represented in hex string.
  */
-@property(nonatomic, strong, readonly) NSString *shortIdentifier;
+@property (nonatomic, strong, readonly) NSString *shortIdentifier;
 
 /**
  *  Initialize telemetry object.

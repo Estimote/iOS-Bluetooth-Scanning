@@ -21,58 +21,58 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Strength of magnetic field in X axis in normalized values (-1, 1).
  */
-@property(nonatomic, strong, readonly) NSNumber *normalizedMagneticFieldX;
+@property (nonatomic, strong, readonly) NSNumber *normalizedMagneticFieldX;
 
 /**
  *  Strength of magnetic field in Y axis in normalized values (-1, 1).
  */
-@property(nonatomic, strong, readonly) NSNumber *normalizedMagneticFieldY;
+@property (nonatomic, strong, readonly) NSNumber *normalizedMagneticFieldY;
 
 /**
  *  Strength of magnetic field in Z axis in normalized values (-1, 1).
  */
-@property(nonatomic, strong, readonly) NSNumber *normalizedMagneticFieldZ;
+@property (nonatomic, strong, readonly) NSNumber *normalizedMagneticFieldZ;
 
 /**
  *  Level of ambient light in lux.
  */
-@property(nonatomic, strong, readonly) NSNumber *ambientLightLevelInLux;
+@property (nonatomic, strong, readonly) NSNumber *ambientLightLevelInLux;
 
 /**
  *  Ambient temperature of device in Celsius degree.
  */
-@property(nonatomic, strong, readonly) NSNumber *temperatureInCelsius;
+@property (nonatomic, strong, readonly) NSNumber *temperatureInCelsius;
 
 /**
  *  Battery voltage in millivolts.
  */
-@property(nonatomic, strong, readonly) NSNumber *batteryVoltageInMillivolts;
+@property (nonatomic, strong, readonly) NSNumber *batteryVoltageInMillivolts;
 
 /**
  *  Battery level in percents.
  *
  *  Available since protocol version 2.
  */
-@property(nonatomic, strong, readonly, nullable) NSNumber *batteryLevel;
+@property (nonatomic, strong, readonly, nullable) NSNumber *batteryLevel;
 
 /**
  *  Uptime since last reboot in seconds.
  */
-@property(nonatomic, strong, readonly) NSNumber *uptimeInSeconds;
+@property (nonatomic, strong, readonly) NSNumber *uptimeInSeconds;
 
 /**
  *  FIRMWARE Flag indicating application error. Bool value NO - no error, YES at least one error occurred.
  *
  *  Only available in protocol version 0. Since protocol version 1, it got moved to Telemetry A packet.
  */
-@property(nonatomic, strong, readonly, nullable) NSNumber *applicationError;
+@property (nonatomic, strong, readonly, nullable) NSNumber *applicationError;
 
 /**
  *  FIRMWARE Flag indicating Real Time Clock is not properly configured. Bool value NO - configured, YES - not configured.
  *
  *  Only available in protocol version 0. Since protocol version 1, it got moved to Telemetry A packet.
  */
-@property(nonatomic, strong, readonly, nullable) NSNumber *realTimeClockError;
+@property (nonatomic, strong, readonly, nullable) NSNumber *realTimeClockError;
 
 /**
  * Init.

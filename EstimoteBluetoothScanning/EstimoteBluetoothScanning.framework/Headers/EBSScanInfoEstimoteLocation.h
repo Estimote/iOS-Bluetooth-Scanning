@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 #import "EBSScanInfo.h"
 
-typedef NS_ENUM(NSInteger, EBSScanInfoEstimoteLocationAdvertisingChannel) {
+typedef NS_ENUM (NSInteger, EBSScanInfoEstimoteLocationAdvertisingChannel) {
     EBSScanInfoEstimoteLocationAdvertisingChannelUnknown = 0,
     EBSScanInfoEstimoteLocationAdvertisingChannel37,
     EBSScanInfoEstimoteLocationAdvertisingChannel38,
@@ -26,27 +26,27 @@ typedef NS_ENUM(NSInteger, EBSScanInfoEstimoteLocationAdvertisingChannel) {
 /**
  * Type of Estimote Broadcasting Scheme frame.
  */
-@property(nonatomic, assign, readonly) NSInteger frameType;
+@property (nonatomic, assign, readonly) NSInteger frameType;
 
 /**
  * Version of Estimote Broadcasting Scheme protocol.
  */
-@property(nonatomic, assign, readonly) NSInteger protocolVersion;
+@property (nonatomic, assign, readonly) NSInteger protocolVersion;
 
 /**
  * Public identifier of the Estimote Device.
  */
-@property(nonatomic, strong, readonly) NSString *publicId;
+@property (nonatomic, strong, readonly) NSString *publicId;
 
 /**
  * Measured power of the beacon (with what RSSI [dBm] device can be heard at exactly 1 m).
  */
-@property(nonatomic, assign, readonly) NSInteger measuredPower;
+@property (nonatomic, assign, readonly) NSInteger measuredPower;
 
 /**
  * Information about channel on which the information was broadcasted.
  */
-@property(nonatomic, assign, readonly) EBSScanInfoEstimoteLocationAdvertisingChannel advertisingChannel;
+@property (nonatomic, assign, readonly) EBSScanInfoEstimoteLocationAdvertisingChannel advertisingChannel;
 
 /**
  * Designated initalizer

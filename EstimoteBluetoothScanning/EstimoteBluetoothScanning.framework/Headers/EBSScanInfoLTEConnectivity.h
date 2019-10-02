@@ -9,7 +9,8 @@
 //
 //  Copyright © 2018 Estimote. All rights reserved.
 
-#import <EstimoteBluetoothScanning/EstimoteBluetoothScanning.h>
+#import <Foundation/Foundation.h>
+#import "EBSScanInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,22 +22,22 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Cloud identifier of discovered device.
  */
-@property(nonatomic, strong, readonly) NSString *publicID;
+@property (nonatomic, strong, readonly) NSString *publicID;
 
 /**
  *  Version of application running on the device.
  */
-@property(nonatomic, strong, readonly, nullable) NSString *appVersion;
+@property (nonatomic, strong, readonly, nullable) NSString *appVersion;
 
 /**
  *  Version of bootloader running on the device.
  */
-@property(nonatomic, strong, readonly, nullable) NSString *bootloaderVersion;
+@property (nonatomic, strong, readonly, nullable) NSString *bootloaderVersion;
 
 /**
  Flag indicating if beacon's button was pressed.
  */
-@property(nonatomic, strong, readonly) NSNumber *isPressed;
+@property (nonatomic, strong, readonly) NSNumber *isPressed;
 
 /**
  Initializer.

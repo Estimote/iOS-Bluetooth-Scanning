@@ -24,7 +24,7 @@
 /**
  * Packet's advertisement data dictionary.
  */
-@property(nonatomic, strong, readonly) NSDictionary<NSString *, id> *advertisementDataDictionary;
+@property (nonatomic, strong, readonly) NSDictionary<NSString *, id> *advertisementDataDictionary;
 
 /**
  * Designated initalizer

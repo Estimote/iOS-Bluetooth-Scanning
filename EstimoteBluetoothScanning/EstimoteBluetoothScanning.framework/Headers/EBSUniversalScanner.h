@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The possible errors returned during scanning Estimote Devices.
  */
-typedef NS_ENUM(NSInteger, EBSUniversalScannerError) {
+typedef NS_ENUM (NSInteger, EBSUniversalScannerError) {
     /** The platform does not support Bluetooth low energy. */
     EBSUniversalScannerErrorBluetoothNotSupported,
 
@@ -38,19 +38,19 @@ typedef NS_ENUM(NSInteger, EBSUniversalScannerError) {
 /**
  Represents the current state of a Central Manager.
  */
-typedef NS_ENUM(NSUInteger, EBSCentralManagerState) {
+typedef NS_ENUM (NSUInteger, EBSCentralManagerState) {
     /* State unknown, update imminent. */
-    EBSCentralManagerStateUnknown = 0,
+    EBSCentralManagerStateUnknown      = 0,
     /* The connection with the system service was momentarily lost, update imminent. */
-    EBSCentralManagerStateResetting = 1,
+    EBSCentralManagerStateResetting    = 1,
     /* The platform doesn't support the Bluetooth Low Energy Central/Client role. */
-    EBSCentralManagerStateUnsupported = 2,
+    EBSCentralManagerStateUnsupported  = 2,
     /* The application is not authorized to use the Bluetooth Low Energy Central/Client role. */
     EBSCentralManagerStateUnauthorized = 3,
     /* Bluetooth is currently powered off. */
-    EBSCentralManagerStatePoweredOff = 4,
+    EBSCentralManagerStatePoweredOff   = 4,
     /* Bluetooth is currently powered on and available to use. */
-    EBSCentralManagerStatePoweredOn = 5,
+    EBSCentralManagerStatePoweredOn    = 5,
 };
 
 /**
@@ -62,7 +62,7 @@ typedef NS_ENUM(NSUInteger, EBSCentralManagerState) {
 /**
  Restart interval value that causes Universal Scanner to never restart automatically.
  */
-#define EBSUniversalScannerRestartIntervalRestartNever INFINITY
+#define EBSUniversalScannerRestartIntervalRestartNever  INFINITY
 
 /**
  Defines the methods to receive info about scanned Estimote devices.
@@ -109,23 +109,23 @@ typedef NS_ENUM(NSUInteger, EBSCentralManagerState) {
 /**
  The delegate object to receive scan info events.
  */
-@property(nonatomic, weak, readwrite, nullable) id<EBSUniversalScannerDelegate> delegate;
+@property (nonatomic, weak, readwrite, nullable) id<EBSUniversalScannerDelegate> delegate;
 
 /**
  Informs if scan is in progress.
  */
-@property(nonatomic, assign, readonly) BOOL isScanning;
+@property (nonatomic, assign, readonly) BOOL isScanning;
 
 /**
  An array of `ECOScanInfo` subclasses representing device types
  for which `EBSUniversalScanner` is scanning.
  */
-@property(nonatomic, strong, readonly, nullable) NSArray<Class> *deviceTypesToScan;
+@property (nonatomic, strong, readonly, nullable) NSArray<Class> *deviceTypesToScan;
 
 /**
  Core Bluetooth Central Manager state.
  */
-@property(nonatomic, assign, readonly) EBSCentralManagerState state;
+@property (nonatomic, assign, readonly) EBSCentralManagerState state;
 
 /**
  Start a scan for Estimote devices of specified types.
@@ -149,12 +149,12 @@ typedef NS_ENUM(NSUInteger, EBSCentralManagerState) {
  */
 @interface EBSUniversalScanner : NSObject <EBSUniversalScannerProtocol>
 
-@property(nonatomic, weak, readwrite, nullable) id<EBSUniversalScannerDelegate> delegate;
+@property (nonatomic, weak, readwrite, nullable) id<EBSUniversalScannerDelegate> delegate;
 
 /**
  Shared dispatch queue passed to CBCentralManagers upon creation.
  */
-@property(nonatomic, strong, readonly, class) dispatch_queue_t defaultCBCentralManagerQueue;
+@property (nonatomic, strong, readonly, class) dispatch_queue_t defaultCBCentralManagerQueue;
 
 /**
  Designated initializer.
@@ -176,7 +176,7 @@ typedef NS_ENUM(NSUInteger, EBSCentralManagerState) {
                         Pass in EBSUniversalScannerRestartIntervalRestartAlways to set restarting with every packet,
                         EBSUniversalScannerRestartIntervalRestartNever to disable automatic restarting at all.
  */
-- (instancetype)initWithMinRestartInterval:(NSTimeInterval)restartInterval
+- (instancetype)initWithMinRestartInterval:(NSTimeInterval) restartInterval
     __deprecated_msg("Use -initWithScanRestartTimerTimeInterval: instead");
 
 /**
