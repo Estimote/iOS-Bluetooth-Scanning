@@ -100,7 +100,10 @@ typedef NS_ENUM(NSUInteger, EBSScanInfoDeviceFamily) {
     EBSScanInfoDeviceFamilyUWBBeacon,
     EBSScanInfoDeviceFamilyMirror,
     EBSScanInfoDeviceFamilyLTEBeacon,
-    EBSScanInfoDeviceFamilySticker
+    EBSScanInfoDeviceFamilySticker,
+    EBSScanInfoDeviceFamilyAIBeacon,
+    // Keep in mind that identifiers 0x7F - 0xFF are reserved for future use.
+    EBSScanInfoDeviceFamilyWearable = 0x80
 };
 
 NS_ASSUME_NONNULL_BEGIN

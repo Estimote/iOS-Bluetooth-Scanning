@@ -35,9 +35,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly, nullable) NSString *bootloaderVersion;
 
 /**
- Flag indicating if beacon's button was pressed.
+ *  Flag indicating if beacon's button was pressed.
  */
 @property (nonatomic, strong, readonly) NSNumber *isPressed;
+
+/**
+ *  Device family version.
+ */
+@property (nonatomic, strong, readonly) NSNumber* deviceFamily;
 
 /**
  Initializer.
@@ -48,14 +53,26 @@ NS_ASSUME_NONNULL_BEGIN
  @param publicID Cloud identifier of discovered device.
  @param appVersion Version of application running on the device.
  @param bootloaderVersion Version of bootloader running on the device.
+ 
  */
+
+/// Initializer.
+/// @param peripheralIdentifier Identifier of scanned peripheral.
+/// @param rssi RSSI value measured during the scan.
+/// @param scanDate Time when the device was scanned.
+/// @param publicID Cloud identifier of discovered device.
+/// @param appVersion Version of application running on the device.
+/// @param bootloaderVersion Version of bootloader running on the device.
+/// @param isPressed Flag inidcation if beacon's button was pressed.
+/// @param deviceFamily Device's family.
 - (instancetype)initWithPeripheralIdentifier:(NSUUID *)peripheralIdentifier
                                         rssi:(NSNumber *)rssi
                                     scanDate:(NSDate *)scanDate
                                     publicID:(NSString *)publicID
                                   appVersion:(nullable NSString *)appVersion
                            bootloaderVersion:(nullable NSString *)bootloaderVersion
-                                   isPressed:(NSNumber *)isPressed;
+                                   isPressed:(NSNumber *)isPressed
+                                deviceFamily:(NSNumber *)deviceFamily;
 
 @end
 
